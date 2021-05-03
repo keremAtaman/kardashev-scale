@@ -1,0 +1,10 @@
+CARDSIZE =6.3,8.8
+
+LINK =C:\Users\LPMSI00094\OneDrive\board game design\Space Roles Game\nanDECK\Tiles\Tiles.xlsx
+zoom=92
+
+VISUAL=, 10, 10
+IMAGE="1-{(BG IMAGE)}",[BG IMAGE],-0.537%,-0.096%,100%,100%
+IMAGE="1-{(TOKEN)}",[TOKEN],55.973%,84.904%,17.584%,11.827%,0,P
+ENDVISUAL
+LINK="C:\Users\LPMSI00094\OneDrive\board game design\Space Roles Game\nanDECK\Cards\Event\Event Cards.txt"

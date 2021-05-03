@@ -1,0 +1,13 @@
+CARDSIZE =6.3,8.8
+
+LINK =C:\Users\LPMSI00094\OneDrive\board game design\Space Roles Game\nanDECK\Cards\Event\Event Cards.xlsx
+zoom=92
+
+VISUAL=, 10, 10
+IMAGE="1-{(BG IMAGE)}",[BG IMAGE],-0.537%,-0.096%,100%,100%
+FONT=Arial,10,BT,#000000
+;NAME
+TEXT="1-{(NAME)}",[NAME],9.799%,5%,71.007%,8.462%,LEFT,CENTER
+FONT=Arial,6,T,#000000
+TEXT="1-{(TEXT)}",[TEXT],8.993%,57.212%,82.55%,37.5%,LEFT,WWCENTER
+ENDVISUAL
