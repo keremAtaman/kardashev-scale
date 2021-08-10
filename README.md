@@ -3,11 +3,13 @@ TODO: Game description
 
 I outline my game design journey in the [Design Diaries](<./Design Diaries.md>)
 
-Game rules can be found [here](<./Game Rules.md>)
+Game rules can be found in the [Game Rules](<./Game Rules.md>) doc
+
+My things to do for the future can be found h
 ## Version History
 ### v1.0 - Initial Release
 - Initial release. As expected, many issues were found, which are outlined and addressed in v1.1
-### v1.1 (in Progress)
+### v1.1 (in Progress) - Implementation of Base Gameplay
 - Making the game more simple and fun
     - Remove Basic Actions except char specific ones 
         - e.g. Money transfer of MoC should stay, but "shill" cards should go
@@ -51,6 +53,3 @@ Game rules can be found [here](<./Game Rules.md>)
             - E.g. only have "put this card to your hand instead of discard after turn ends". 
     - Tradable goods: Should they still be a thing?
         - No for the time being. MoC already has gold as a resource, and tradable goods feel a bit too similar to that
-    - TODO: Should everyone play as deckbuilder? 
-        - MoD for example feels weird
-        - MoS can be a bit more exciting - maybe have "tiered" researches (e.g. a Tier 1 Research that says "draw 3 Tier 2 Researches" )

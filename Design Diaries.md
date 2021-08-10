@@ -36,21 +36,18 @@ Let's expand the points above:
         - Armies can be used to defend against/attack/force their will on Foreign Nations and neutral countries
         - Intellegence is used to conduct covert ops and to gain advantage over Foreign Nations.
         - Intellegence will also allow the MoD to see and change the intent of the Foreign Nations. The intents will only be revealed to the MoD, which is the hidden information that will make MoD participate in the discussions
-        - TODO: integrate TI's combat a bit (each player rolls dice to hit. Players decide which of their units get hit)
     - Minister of Science (MoS): In charge of researching new technologies.
         - Researching technologies will change the game mechanics, give Players bonuses, and interact with the Kardashev Scale
         - Only the MoS will see the available technologies, which is the hidden information that will make MoS participate in the discussions
         - The technologies will be split into tiers based on difficulty of research so the MoR will be guaranteed to be able to do research that fits the research infrastructure at any point in the game
         - The researches will be randomly selected from a set of researches, so no player other than the MoR will know what researches are available each game.
-        - TODO: unit upgrades (increased chance to hit, more hitpoints, abilities...)
         - Researches to have pre-requisites (money cost, X engineering researches required and so on. Check TI's research card design for a nice example)
     - Minister of Foreign Affairs (MoFA): Deals with Foreign Nations and neutral countries
-        - TODO: hidden mechanic
     - Minister of Commerce (MoC): In charge of money management, which is the resource required to take action by everyone, including Foreign Nations.
         - They will be doing cooperation requiring investments (e.g. select a player, if they roll a die and win, gain money, otherwise, lose the investment)
         - There will be an investment deck composed of randomly selected cards which only the MoC will be able to take a look at
 - World Events will be drawn from an event deck at each Phase. 
-- Each role will have a victory condition they can work towards, and players can help each other with those conditions (for example, MoFA's victory condition may require being allies with every Foreign Nation. MoD can help this by eliminating uncooperative Nations)
+- Each role will have a victory condition they can work towards, and players can help each other with those conditions (for example, MoFA's victory condition may require being allies with every Foreign Nation. MoD can help this by eliminating uncooperative Nations). So victory conditions can be like:
     - MoD: Be the last Nation standing OR control 3/4 of the map.
     - MoS: Reach the end of the Kardashev Scale
     - MoC: (?) Have a turn where your Nation has 3/4 of the money in play
@@ -60,6 +57,135 @@ Let's expand the points above:
     - Increasing your Nation's Kardashev Scale value will allow the players to gain/increase an ability, very similar to how leveling up works in RPGs
     - Kardashev Scale will naturally increase over time, always creating a sense of urgency as well as a game clock.
 
+This feels like a good starting point to create a bit more of the game, but I will call it for today.
+
 Link to the GDC talk regarding procedural generation via "Abstraction Mountain" method:  https://www.youtube.com/watch?v=J5qnnxFoBss&ab_channel=GDC
 
 Link to the slides of the said talk: https://ubm-twvideo01.s3.amazonaws.com/o1/vault/gdc2019/presentations/Grinblat_Jason_End-to-End_Procedural_Generation.pdf
+
+# 11th of July, 2021: Digging deep into game mechanics (In process of creating v1.1)
+
+It turns out a really good way for me to think about the game and it's mechanics/problems etc. was doing so while biking. I usually bike with headphones, so I did not have much concentration. Today however, thanks to the fact that my phone's batteries were dead, I discovered biking is a great time to think about mechanics and solutions. There were no distractions, and something about the road makes me think more clearly.
+
+So, what came out of my biking session? Long story short:
+
+- Write the goals of versions for each version. That way, it will be easier to figure out when a version can be released, examined, and what objectives need to be achieved
+- It will sound silly, but I learned that I should not write the version log until after that version is finished. I should however, have a short list for what tasks etc. should be done for the current version. I'll use Github Issues to keep track of what objectives need to be done for which versions. TODO bot should make it easy: https://github.com/JasonEtco/todo
+- I think I have a decent gameplay loop. At each turn, players will play the cards face down and put them in a pile. The World Event(s) and Foreign Nation cards that say "Have Nation X take all of their actions" will also be added to that pile and shuffled. The cards on that pile will be drawn and resolved one at a time
+- Players can have a set of decks, each having a specific theme (e.g. MoD will have one deck for military and one deck for intellegence actions). Players can pick and choose one or many cards from those decks to be played. However, to prevent spamming of all actions every turn, some limitations such as "you can only play one card from this deck" or "pay 1 gold to play a card from this deck" may be implemented.
+- Foreign Nations, just like the players, can have multiple designated decks (e.g. a deck for covert ops, foreign relations...)
+- Foreign nations, in v1.2 and later, can have custom abilities and decks.
+    - e.g. England: Play two covert action cards instead of one each turn. Whenever a covert action card is played, gain 1 gold.
+- The order in which I think I need to design the roles/mechanics should be as follows. My reasoning is that I need to define tile ownership and money mechanics before Foreign Nations, and when these are put into place, design MoS as that role will affect others' mechanics
+    1. Minister of Defence 
+    2. Minister of Commerce
+    3. Foreign Nations and Minister of Foreign Affairs
+    4. Minister of Science and the Kardashev Scale (as this role affects every other role's mechanics)
+    5. A second look at Foreign Nations, MoFA and then World Events
+
+# 12th of July, 2021: MoD part 1 (In process of creating v1.1)
+Ok, let's get into the meat of Minister of Defence; they provide your Nation's security with both armies and covert actions. 
+- Armies
+    - Recruit & move troops.
+        - (?) Troops should have an upkeep cost, so the MoD just doesn't spam recruit as an action and we don't have 100+ troop models roaming around.
+    - Bully Foreign Nations and prevent Foreign Nations from bullying you
+    - Capture and secure Neutral Ground
+    - Attack Foreign Nations that don't have nukes
+    - (?) Prevent Foreign Nations from using their armies against each other or neutral countries
+- Covert Actions
+    - Observe and intercept Foreign Nation actions
+    - (?) victory condition
+    - (?) Steal resources from Foreign Nations
+    - Prevent covert actions being done to you
+    - Have intellegence levels between countries, which will determine what you can do to Foreign Nations and what they can do to you, and the chances of successful covert actions.
+    - Failed covert actions will decrease relations with Foreign Nations
+    - (?) Increase influence/take control of neutral countries
+
+# 13th of July, 2021: MoD part 2 (In process of creating v1.1)
+Created MoD's cards based on the points above. Of course, everything below is subject to change as the game design evolves.
+
+| Text                                                                                                                                                                                                                                                                                                                                                                                                             | Credit | Type       | Name              |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ | ---------- | ----------------- |
+| Pay X Credits to move X Troops to any tile they are allowed to move to                                                                                                                                                                                                                                                                                                                                           | 0      | Army       | Mobilize Troops   |
+| Pay X Credits to place X Troops to any tile within your Nation                                                                                                                                                                                                                                                                                                                                                   | 0      | Army       | Recruitment Drive |
+| Do an Intellegence Check against a Foreign Nation. If successful, increase intellegence against that Nation by 1. Otherwise, declare relations with that Nation by 1.                                                                                                                                                                                                                                            | 1      | Covert Ops |
+| Select a Neutral Country you have the most influence on (no ties allowed). Do an intellegence check against that Neutral Country.<br><br>If successful, add that Neutral Country to your Nation. Decrease relations with any Foreign Nation that had influence on that Nuetral Country by 1.<br><br>If unsuccessful, decrease relations with all Foreign Nations that have influence in that neutral coutry by 1 | 3      | Covert Ops | Coup              |
+| Select a tile, then do an Intellegence Check against the owner of that tile.<br><br>If successful, increase influence in that tile by 1.<br><br>If unsuccessful, decrease relations with all Foreign Nations that have influence in that tile by 1                                                                                                                                                               | 1      | Covert Ops | Spread Influence  |
+| Select a Foreign Nation, then do an intellegence check against that them. If successful, MoD can negate a card that Foreign Nation plays on their next turn. If unsuccessful, decrease relations with that Foreign Nation by 1                                                                                                                                                                                   | 2      | Covert Ops | Sabotage          |
+| Select a Foreign Nation, then do an intellegence check against them. If successful, MoD looks at the top 3 card of each of that Foreign Nation's deck. If unsuccessful, decrease relations with that Foreign Nation by 1                                                                                                                                                                                         | 1      | Covert Ops | Spy               |
+| TODO: steal science                                                                                                                                                                                                                                                                                                                                                                                              |        | Covert Ops | Steal Tech        |
+| TODO: steal credits                                                                                                                                                                                                                                                                                                                                                                                              |        | Covert Ops | Steal Credits     |
+| Select a tile, then do an intellegence check against the owner of the tile. If successful, remove number of troops belonging to the owner equal to the amount by which the intellegence check succeeded. If unsuccessful, decrease relations with all Foreign Nations that own/at least have one influence on that tile by 1                                                                                     | 2      | Covert Ops | Terrorism         |
+
+
+# 13th of July, 2021: MoC (In process of creating v1.1)
+I'd say MoD is somewhat stable for now, now let's do MoC. The key things to consider when doing MoC are:
+
+1. Ensure MoC cannot spam the same money making tools over and over - there needs to be diversity, interesting decisions, and no endless loops (at least in the beginning) that give infinite money
+    1. Maybe limit the # of investments that could be played per turn? And have researches to increase the amount?
+2. The MoC is responsible for who should be given how much money. He should have a module that sets how much money should be given to players at the end of each turn, and can change the numbers on the module by playing a X cost "module readjustment" card
+3. MoC should be able to do risky investments that require cooperaation/plannning with other players 
+    1. e.g. if a tech is researched this turn, gain X gold. Otherwise, lose all invested gold
+4. (?) To prevent overloading the MoC, start with a small sample deck of investment cards, then gradually expand the selection of investments. Or, have deckbuilder like things for investments so they only deal with a certain set of opportunities.
+5. (?) Maybe have the MoC do investments BEFORE cards are dealt so things can be resolved within the current turn
+
+So here's what came out:
+
+| Text                                                                                                                                                                                                                                                                              | Credits | Type            | Name                       |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------------- | -------------------------- |
+| You may edit how much Credits at the end of the turn each player receives                                                                                                                                                                                                         | 1       | Diversification |
+| When you play this card, place 6 Credits on it. This card stays on the field until there is no more Credits on it<br>At the start of your turn, take 2 Credits from this card. If there is no Credits remaining on this card, shuffle it back to the minister of commerce's deck  | 1       | Investment      |                            |
+| When you play this card, place 8 Credits on it. This card stays on the field until there is no more Credits on it<br>At the start of your turn, take 2 Credits from this card. If there is no Credits remaining on this card, shuffle it back to the minister of commerce's deck  | 2       | Investment      |                            |
+| When you play this card, place 12 Credits on it. This card stays on the field until there is no more Credits on it<br>At the start of your turn, take 3 Credits from this card. If there is no Credits remaining on this card, shuffle it back to the minister of commerce's deck | 4       | Investment      |                            |
+| When you play this card, place 16 Credits on it. This card stays on the field until there is no more Credits on it<br>At the start of your turn, take 2 Credits from this card. If there is no Credits remaining on this card, shuffle it back to the minister of commerce's deck | 5       | Investment      |                            |
+| When you play this card, shuffle it into the event deck<br>When this card is played from the event deck, each Player doubles their money. Then, shuffle this card into MoC's deck                                                                                                 | 3       | Stonks          |                            |
+| Receive 3 Credits                                                                                                                                                                                                                                                                 | 0       | Investment      |                            |
+| Select a player, put this card in front of them, then put 2X Credits on this card. Until the end of this turn, if they do a check and are successful, receive all the Credits on this card.                                                                                       | X       | Stonks          |                            |
+| Call Heads or Tails, then toss a coin. If successful, gain 2X Credits                                                                                                                                                                                                             | X       | Stonks          | Push your luck             |
+| Pick a meter, guess which way it will go next, then put this card in the direction called and place 2X Credits on this card.<br>When the meter moves, if it moves in the guessed direction, gain 2X Credits.                                                                      | X       | Stonks          |                            |
+| Call a number, then roll a die. If successful, gain 6X Credits.                                                                                                                                                                                                                   | X       | Stonks          |                            |
+| Place 4X Credits on this card. If another "Stonks" card is successful until end of the next turn, gain all the Credits on this card.                                                                                                                                              | X       | Stonks          | Derivatives                |
+| Gain 1 Credits for each Tile you own                                                                                                                                                                                                                                              | 0       | Investment      | … And Taxes                |
+| Gain 9 Credits                                                                                                                                                                                                                                                                    | 5       | Investment      | Hedge Funds                |
+| Place this card in front of the Minister of Defence. Until the end of this turn, whenever they successfully attack or defend a tile, gain Credits equal to the number of enemy Troops                                                                                             |         | Trust           | Risk (get it?)             |
+| Place this card in front of Minister of Science. Until the end of next turn, whenever a successful research is made, gain credits equal to the tier of that research                                                                                                              |         | Trust           | Science = Profit = Science |
+| Place this card in front of Minister of Foreign Affaris. Until the end of the next turn, whenever a successful aggreement is made, gain 4 Credits                                                                                                                                 |         | Trust           |                            |
+| Place this card in front of a Foreign Nation. Until the end of this turn, whenever a card that Foreign Nation plays gets negated, gain 3 Credits                                                                                                                                  |         | Trust           | Salt to the wound          |
+| Place all your Credits on this card. Guess which resources the next World Event will affect. If you guess correctly, gain Credits equalling the Credits you put on this card times the number of successfully guessed resources                                                   |         | Stonks          | YOLO                       |
+
+# 19th of July, 2021: Foreign Nations (In process of creating v1.1)
+
+Let's start with the Foreign Nations - their main purpose is to cause crises and make the game difficult for the players. There are quite a few cards that say "Increase Resource X. Any Nation who has less Resource X than you loses 4 Gold". The design aim is to have a Foreign Nation overpower you with a certain resource's abundance, but I feel this may make the game too difficult. I'll have to keep a close eye on it.
+
+Also, there are "Aggression" cards, which the MoFA should be able to react to
+
+| Effect                                                                                                                                                                                                                                                                                                                                  | Type       | Name                      |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | ------------------------- |
+| Place 1 influence on an adjacent territory you do not control                                                                                                                                                                                                                                                                           | Aggression | Spreading Influence       |
+| If you have  no casus belli tokens on the map, place a casus belli token on an adjacent tile, then put this card to the top of the pile<br><br>Otherwise, move your troops to a territory with your Casus Belli token on it. If your troops are the only ones remaining there at the end of the turn, add that territory to your Nation | Aggression | WAAAGH                    |
+| Gain 4 Credits. Any Nation that has less Credits than you loses 4 Credits                                                                                                                                                                                                                                                               | Commerce   | Economic Warfare          |
+| Gain 6 Credits                                                                                                                                                                                                                                                                                                                          | Commerce   | Hedge Funds               |
+| Gain 4 Credits                                                                                                                                                                                                                                                                                                                          | Commerce   | Easy Mark                 |
+| If you have no nukes, build 2 nukes                                                                                                                                                                                                                                                                                                     | Defence    | Stockpile                 |
+| Remove 1 influence from a territory you own or is adjacent to you                                                                                                                                                                                                                                                                       | Defence    | Purge                     |
+| Increase the attack of your Troops by 1. Increase your Kardashev Scale by 1. Remove this card from the game once it is resolved.                                                                                                                                                                                                        | Defence    | Troop Enhancements        |
+| Increase the health of your Troops by 1. Increase your Kardashev Scale by 1. Remove this card from the game once it is resolved.                                                                                                                                                                                                        | Defence    | Troop Enhancements        |
+| Increase the chance to hit of your Troops by 1. Increase your Kardashev Scale by 1. Remove this card from the game once it is resolved.                                                                                                                                                                                                 | Defence    | Troop Enhancements        |
+| Add 2 Troops to your Nation. Any Nation that has less Troops than you loses 4 Credits                                                                                                                                                                                                                                                   | Defence    | Big Stick Policy          |
+| Do an intellegence check against the Player Nation. If successful, increase your intellegence by 2                                                                                                                                                                                                                                      | Defence    |                           |
+| Increase the Kardashev Scale by 2 for this Foreign Nation                                                                                                                                                                                                                                                                               | Science    |                           |
+| Increase the Kardashev Scale by 1 for this Foreign Nation                                                                                                                                                                                                                                                                               | Science    |                           |
+| Increase Kardashev Scale by 1. Any Nation whose Kardashev Scale is less than yours loses 4 Credits                                                                                                                                                                                                                                      | Science    | Technological Superiority |
+
+# 22nd of July, 2021: MoFA (In process of creating v1.1)
+
+Main idea is for this character to interact with Foreign Nations and neutral countries.
+
+Aside from the cards, the following should apply to MoFA:
+
+- Whenever a Foreign Nation takes an Aggression action, the MoFA should be able to react to it. The way to do it would be either soft or hard power
+- Soft power:
+    -   https://softpower30.com/what-is-soft-power/
+    - Science is soft power
+    - Economy is hard power
+    - Aggreements and facilitation is soft power
