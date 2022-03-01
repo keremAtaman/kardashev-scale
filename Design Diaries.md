@@ -189,3 +189,17 @@ Aside from the cards, the following should apply to MoFA:
     - Science is soft power
     - Economy is hard power
     - Aggreements and facilitation is soft power
+
+# 28th of February, 2022 (In process of creating v1.1)
+
+It has been... so long. But the good news is, I have a two week break while switching jobs, so I should be able to focus more on this and hopefully release the alpha
+
+I've realized that I spent WAY too much time and effort on the Tabletop Simulator framework which made it hard to come back and work on this. So I'll switch gears and focus on generating a hard copy of the game rather than an online one. This will also give me the opportunity to look at the cards and see how they jive with each other before continuing with MoFA and MoS
+
+It is also now I have realized that since I am out of my current job, I lost the Windows license, and more importantly, the excel that came with the job. I'll have to look for alternatives of storing data in a nice- csv like format. I opted to use wps office, and have installed the chrome office extension as a backup.
+
+Going over the foreign nation cards, I realized I need to add more cards to increase foreign nations' effects on each other. Them signing nuclear arms treaties and such. This will be a TODO for the next release.
+
+Speaking of which, I have moved a lot of items, including Minister of Science, to the next release. I feel like the core gameplay loop exists, and I need to observe how it plays before moving on with other gameplay items.
+
+I am glueing paper in front of Magic cards and then writing on those cards with a pencil my cards. When I am done writing all of the cards, I will playtest for the first time. Exciting! But I will admit, writing the description of each card and then pasting the paper with the description to the magic card turns out to be a laborious task. I've only finished Foreign Nation cards (which only has 14 cards as of writing) and needed to take a break. To speed up the process, I decided to only write the minister, cost and name on the card rather than the entire card text, which I have to address before I invite others for playtesting (or not... We'll see). My hope is that this way, I don't have to change card text in both software documentation and the card itself, but just on the software documentation
