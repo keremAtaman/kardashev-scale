@@ -12,6 +12,11 @@ integrate TI's combat a bit (each player rolls dice to hit. Players decide which
 
 unit upgrades (increased chance to hit, more hitpoints, abilities...)
 
+- Increasing intellegence should be a basic action for MoD. the effect should be:
+    - Do an Intellegence Check against a Foreign Nation. If successful, increase intellegence against that Nation by 1. Otherwise, decrease relations with that Nation by 1.
+- Increasing/Decresing relations should be a basic action for MoFA. The effect should be:
+    - Choose a Nation. You may decrease relations by 1 with them (given no nuclear war), or you may roll a Diplomacy check instead and increase relations by 1 if successful
+
 - Armies
     - Armies and nukes have an upkeep cost
     - Bully Foreign Nations and prevent Foreign Nations from bullying you
@@ -25,9 +30,12 @@ unit upgrades (increased chance to hit, more hitpoints, abilities...)
 
 # Next Release
 - (?) Foreign Nations to increase/decrease relations with each other, MoFA to take advantage of it
+- Foreign Nation personalities, stats (e.g. how difficult it is to win Diplomacy Check against them, # of cards of each type...). The "capital tile" (e.g. corner tile) determines some/all of the personality traits. Capturing a Foreign Nation's capital grants the players the ability to use that Nation's effects.
 - (?) Player objectives
 - Event Deck
 - (?) More interactions (treaties, covert actions...) between Nations and Nations gaining advantage by being on a tile (e.g. their Credits)
 - (?) Victory Conditions
 - MoFA should be able to react to aggressions of Foreign Nations (reduce relations etc)
-- MoS
+- (?) Foreign Nations can lose Credits based on troop upkeep and gain Credits = # of territories owned
+- A set of capital tiles, one of which will be randomly assigned to the players' Nation which will give a unique effect
+    - Or, give "civ" cards randomly betweem players (?)

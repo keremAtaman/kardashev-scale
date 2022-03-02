@@ -203,3 +203,38 @@ Going over the foreign nation cards, I realized I need to add more cards to incr
 Speaking of which, I have moved a lot of items, including Minister of Science, to the next release. I feel like the core gameplay loop exists, and I need to observe how it plays before moving on with other gameplay items.
 
 I am glueing paper in front of Magic cards and then writing on those cards with a pencil my cards. When I am done writing all of the cards, I will playtest for the first time. Exciting! But I will admit, writing the description of each card and then pasting the paper with the description to the magic card turns out to be a laborious task. I've only finished Foreign Nation cards (which only has 14 cards as of writing) and needed to take a break. To speed up the process, I decided to only write the minister, cost and name on the card rather than the entire card text, which I have to address before I invite others for playtesting (or not... We'll see). My hope is that this way, I don't have to change card text in both software documentation and the card itself, but just on the software documentation
+
+# 1st of March, 2022 (Playtesting v1.1)
+
+Exciting day, as this will be the playtesting of v1.1. Here are some of my notes:
+
+- Increasing intellegence should be a basic action for MoD. the effect should be:
+    - Do an Intellegence Check against a Foreign Nation. If successful, increase intellegence against that Nation by 1. Otherwise, decrease relations with that Nation by 1.
+- Moving troops around, recruiting troops and building nukes should be basic actions for MoD.
+- Increasing/Decresing relations should be a basic action for MoFA. The effect should be:
+    - Choose a Nation. You may decrease relations by 1 with them (given no nuclear war), or you may roll a Diplomacy check instead and increase relations by 1 if successful
+- Ability to distribute Credits between players should be a default action for MoC.
+- Default actions should also be cards so they can interact with mechanics involving events and event resolution
+- MoD's steal tech should only be used against a nation that has a higher KS than the player Nation
+- This I have to think about: there are turns where the best action a player can do is their default/do nothing. I am not sure if this is desired or not
+- Players can draw 5 cards and discard up to 3 to draw that many new cards. This feels like a nice number for learning cards and going through abilities. This number may need to change if a player cannot go through their deck fast enough/too fast
+- MoC: The ability to distribute Credits between players should not be a card, as it will have to occur quite frequently (unless the players start with a decent chunk of starting Credits). 
+- When you roll a die, it does not feel exciting. Maybe I should add critical successes and failures and roll a d20 instead of a d6 for some rolls 
+- It feels having a single foreign Nation is slow. At least 2 will be needed to spice things up
+- Tiles can be more unique to give a "I am so happy/mad I got this tile" feel
+    - Capital tiles: These tiles ive special charactristic to the Nation that controlls them. Also, create a set of capital tiles and give the player Nation a tile from one of that set
+- How can it feel like I am both experiencing scope creep and the feeling that I am cutting features to the point where I am not even in the level of a minimum viable product? It feels the current features are not enough to be fun yet but at the same time it feels like I am trying to cram too much to the game. So let's get back to basics and look at my core gameplay loop:
+    - Players are experiencing a variety of challanges and they must all work together to achieve them.
+        - There is a Kardashev Scale the players have to keep up with. This implies each Nation must have a "increase KS" card that occurs every now and then
+        - Foreign Nations are causing crises/difficulties. This is not happening yet. Giving "personalities" and weaknesses to foreign nations should solve this issue
+        - More synergies will be needed:
+            - MoS -> All: Permenant upgrades that benefir players. MoS gets to pick what area (military etc) to invest in
+            - MoC -> All: Everyone needs Credits!
+            - MoFA -> All: Agreements
+            - MoD <-> MoFA: Influence, Big Stick Policy, the ability to block Foreign Nations, Casus Belli + war combo
+            - MoD -> MoS: Stealing tech
+            - MoD -> MoC: Stealing Credits, plus taking more land increases Credits earned
+            - MoD/MoFA -> Foreign Nations: Looking at the Foreign Nations' deck and altering it
+            - MoFA -> Foreign Nations: Using Soft/Hard Power to block cards
+    - Unexpected and exciting things can happen as cards are being resolved one by one. This is achieved by Foreign Nation cards as well as event cards
+- Welp, I have created new Nations (see Nations.xlsx, which will replace Foreign Nations document eventually) and MoS cards
