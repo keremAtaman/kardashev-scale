@@ -247,7 +247,7 @@ For the record, I did write most effects on my magic cards and made tiles to pla
 
 I think I got lost in the detail, costs, logistics etc. before I could actually stop, figure out the forest I have created before moving on. So, I want to take a step back and try to satisfy the design objectives mentioned at the top of this before going on.
 
-To reiterate: 
+To reiterate the core principles: 
 - The game should be cooperative in which no player can be a "power player" and tell everyone what to do
 - Each player's function must be different, leading to an asymetric coop game. 
 - The game should encourage and require cooperation between players
@@ -255,7 +255,7 @@ To reiterate:
 - The game should be able to be picked up easily by an average board gamer.
 
 Drilling down further:
-- Players will act as different Ministers (e.g. Minister of Commerce, Science...) of a Nation. The Nation will require all the Ministers' departments to function properly.
+- ~~Players will act as different Ministers (e.g. Minister of Commerce, Science...) of a Nation. The Nation will require all the Ministers' departments to function properly.~~ Subject to change - I am having second thoughts about how I can fit core principles with the specific minister based structure
 - Players will have hidden information, which will force everyone a turn to speak and participate in the decision making
 - The challange the game will be throwing at the players will be coming from Foreign Nations, World Events, and the constant need to technologically advance which will come from the Kardashev Scale mechanic.
 - ~~Most of the information regarding the game will not be in a rulebook, but in Ministers' Character Sheets and the cards that are played.~~ I... am not sure about this one. I like the idea, but it may be reaching, and it will severely limit what can be done in the first turns and the enjoyment of the veterans. Still, I shouldn't make the game too hard
