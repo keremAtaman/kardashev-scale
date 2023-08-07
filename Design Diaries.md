@@ -265,3 +265,118 @@ Lastly, I really like the idea of players taking their turns simultaneously and 
 The rest, I'll think about. But I need to think about the general interactions before I dive way deep into cards (I may not even have cards by the end) the characters will have and so on
 
 Today was just reflecting and reiterating. Hopefully in less than 10 months I will have a new entry here
+
+# 6th of August, 2023
+
+I am not sure the feet dragging has been caused by my laziness or something else. I'll try to enforce the harder rule of "make progress at least once per week" and see how far it takes me. Even if it burns me out, I feel it would be a good learning experience.
+
+I decided to scrap the cards and start from scratch, a possibly destructive habit I have for my coding as well. Maybe I should learn how to make my big projects more "re-enterable" rather than "if you are not in this exact mindset and remembering 10 different things at the same time, don't bother"
+
+Going to basics, I really like the idea of each player having something that benefits the other players - however, I don't think every player should be dependent on the other player, maybe that is a bit too extreme. I'll keep this in mind, maybe the aim is to have the players be able to do one thing better rather than requiring another player to do the one thing. For example, maybe everyone can generate money but the player responsible for money does it better. This philosophy will also likely allow the player counts to be more flexible - this idea comes from "the Captain is Dead", "Pandemic" and "Dragonfire". I must admit though, I like the asymetrical aspect of the players (e.g. money guy behaves differently than research huy), which would give more replayability to the game ("hey, I want to play this character next!"). Plus, I don't want to be a pandemic clone, and this route is now giving me the feeling that I'd have to drop everything, which I am not keen on yet. Hmm, maybe I put this idea to the backlog, I must admit I am split.
+
+Maybe Concordia's "Whenever a player plays a card, everyone benefits from it some way"?
+
+# 7th of August, 2023
+
+Let's start with a basic effect:
+- When you play this card, all players gain 1 gold
+
+It's nice right? Good start, and everybody will pat you in the back for playing that card, unless there is a card that says "When you play this card, all players gain 100 gold". Next, how about:
+
+- All players can play an extra card in their turn
+
+Twice the possibilities, twice the fun! Now, let's change the text a bit:
+
+- Pay 1 gold to activate this card. All players can play an extra card in their turn
+
+That's a bit of a gameplay loop right there! Player 1 plays the gold giving card, Player 2 plays the action giving card, and everyone in the table is merry and shouting and happy and thinking of how richer their next turn is.
+
+Ok, one more addition:
+
+- You cannot tell the other players that you can play this card or have this card. Pay 1 gold to activate this card. All players can play an extra card in their turn
+
+Adding a nice little surprise feel to the card.
+
+Let's add a rule to make the above possible to prevent all the cards having the "You cannot tell the other players that you can play this card or have this card" text:
+
+>**You can talk in general about what your cards can do, such as "this will help us with playing cards", but cannot talk specifics about the card**
+
+But how can we make sure that the other players actually will not realize that you have the card in your hand? There must be randomness to the card a player draws, and the cards should not come from a small pool. 
+
+But what if a player draws a card they cannot play, but another player can, or if it would be more beneficial for the other player to play that card? Now we need another rule:
+
+>**You can give another player a card from your hand instead of playing a card**
+
+And if no one has a decent card to play?
+
+>**You can choose to discard X cards from your hand to draw X cards from the deck instead of playing a card**
+
+But what if you did not communicate the card you are discarding well, and another player needed that card? This actually leads to a fork in the road: we can either choose to say "Shouldve communicated better, and as a punishment that card is gone", or we can say
+
+>**You can draw a card from the discard pile instead of playing a card**
+
+Both valid options. But I want to take the Occam's razor approach, so instead of the rule above, I'll say that if you discard a card, it is gonezo. There may be cards that will allow you to interact with it, but interacting with it should not be a starting action. This will add weight to the decision of searching for a new card, after all, it takes effort and sacrifice to unlock new horizons.
+
+***
+
+We actually need an objective for the players and a way to make the game exciting, don't we? Should it be a timer? - Nah, I feel a raw timer feels a bit cheap if it does not have any in-game effects or justification. That being said, the game, at least at the time of this writing, was named Kardashev Scale (tm) wasn't it? So let's use that as our timer/objective.
+
+>**In Kardashev Scale, the players have to keep up with the increasing demands of the forever modernizing world**
+
+And what prevents the players from catching up to Kardashev?
+
+>**Each turn, players place the cards they want to play to the middle. X World events also get shuffled in the middle, and the cards in the middle have their effects resolved one at a time.**
+
+World events can be beneficial or detrimental, and the randomized order of play can make or break some plans. Ok, we're getting somewhere.
+
+***
+
+I'm actually having doubts about the theming - players belonging to a country, running against the Kardashev scale. I may need to change the theming later, once the game is more fleshed out. I may want to pursue a cult theme. Anyway, back to the main difficulty the players have to face.
+
+Actually, I like the idea of the cult - it allows for goofy cards and things to happen in game ("I play the orgy card to give everyone +1 happiness and +1 STDs"), and "Kardashev Scale" could be replaced by the "cult leader" whose demands are growing more and more ridicolous as they are consuming more and more drugs over time. This can also explain the "don't talk about the cards we have" rule, as you are supposed to work somewhat in secrecy. Also the idea of summoning an eldritch god by a ridicolous ritual is a good objective. And players can recruit people from the middle, which can create a deckbuilding aspect.
+
+***
+
+Players have some basic cards that start in their hand/deck at the start of the game, but should also have some cards that are picked randomly from the start to add replayability.
+
+***
+
+What should be the player resources? Money, number of followers, follower happiness, heat (how much the law is coming after the cult) - good start. 
+
+***
+
+Let's try to put this giant text blurb together:
+
+>**Players represent high ranking members of the same cult, with the goal of summoning their eldritch god despite the difficulties and benefits the world will provide for them. Each turn, players will be able to take actions by playing cards, including buying followers from the shared market. The player actions and events will be resolved in a random order.**
+
+Some of the basic action cards include:
+
+- Buy/Recruit: Acquire a card from the middle 
+- Give: Give a card to another player
+- Profit: All players gain 1 gold
+- (?) Scrap: Remove a card from the deck
+
+Some of the world events include:
+- Increase/decrease heat by X
+- Lose/Gain X gold
+- Refresh the shared market
+- Give/take X cultists
+
+Some summoning conditions include:
+- Have X cultists
+- Have X gold
+- Play X cards in one turn
+- Reach X happiness
+- Any combination of the above
+
+Some cultist leader asks include:
+- Each/signle cult leader to sacrifice X cultists
+- Give X gold
+
+Some of the follower/other card effects include:
+- Have another/all players gain X
+- Whenever a follower is played, gain X
+
+***
+
+Hmm, maybe I have too many resources to deal with - let's just start with gold and see where it leads
