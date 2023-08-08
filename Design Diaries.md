@@ -380,3 +380,33 @@ Some of the follower/other card effects include:
 ***
 
 Hmm, maybe I have too many resources to deal with - let's just start with gold and see where it leads
+
+# 8th of August, 2023
+
+I feel "heat" is too good of a mechanic to pass up - It creates very nice narrative scenarios, push your luck situations and adds tension to the game. 
+
+>**You lose the game if HEAT reaches a certain level. Depending on the HEAT level, you may need to add one or multiple cards from the heat deck to the middle where it will be shuffled with all the other cards that will be played. The cards from the HEAT deck tends to generate more HEAT and cause other problems to the players.**
+
+This means we also need a basic follower/action that says:
+
+- Pay X gold. Reduce HEAT by Y
+
+Which also paves way for interesting decision making cards like:
+
+- The Abductor: Gain X HEAT and Y followers.
+
+***
+
+I suppose having both cultists to get from the middle of the board and a cultist counter can be confusing, so let's clear the air on that:
+
+>**Each player starts with X basic cultists, Y random cultists, and X+Y cultist tokens. Whenever a player acquires a cultist from the shared market, they get a cultist token.**
+
+***
+
+Maybe HEAT can replace the cultist leader mechanic? After all, cutting the game down to it's simplest bits is what is reccomended by so many game designers, right?
+
+***
+
+Also, what if there are no good cards in the shared market?
+
+>**Discard the X rightmost cards in the shared market at the end of a round, shift all cards to the right and then fill the marketspace**
